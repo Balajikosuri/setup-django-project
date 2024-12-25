@@ -8,3 +8,7 @@ def hello_world(request):
 
 def hello(request):
     return render(request, 'MyApp/hello.html')
+
+def dynamic_hello(request):
+    context = {'name': 'Balaji'}  # Passing the name dynamically
+    return render(request, 'MyApp/dynamic_hello.html', context)
